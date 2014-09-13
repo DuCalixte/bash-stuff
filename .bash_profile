@@ -1,6 +1,9 @@
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/opt/local/bin:/opt/local/sbin
+PATH=$PATH:/usr/lib64/jvm/java-1.7.0-openjdk-1.7.0/bin
+
+
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
@@ -9,7 +12,7 @@ fi
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-export ProjectPath="$HOME/Projects"
+export ProjectPath="$HOME/Development"
 
 ####################################
 # set up aliases for project names #
@@ -149,6 +152,8 @@ cuke() {
 ###########
 alias ls="ls -GFh"
 alias ll="ls -la"
+alias lt="ls -lat"
+alias cls="clear"
 alias startserv="bundle exec rails server"
 
 #############################
@@ -161,3 +166,5 @@ alias gDiffTree="git diff-tree --no-commit-id --name-only -r"
 gPush() {
     git push -v --porcelain origin $(get_git_branch) 2> /dev/null | sed -e "s/^\(.\)    refs\/heads\/\([^   ]*\):refs\/heads\/\([^  ]*\)    *\(.*\)$/\1 $(tput setaf 3)\2 -> \3$(tput sgr0) \4/"
 }
+
+

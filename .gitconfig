@@ -1,8 +1,11 @@
-[user]
-	name = Dmitriy Khayzin
-	email = dkhayzin@mdsol.com
+# From command line run these commands:
+#	- git config --global user.name "YOUR NAME" 
+#	- git config --global user.email "YOUR EMAIL ADDRESS"
+# Append file to existing .gitconfig file
+#	- cat .gitconfig  >> ~/.gitconfig
+
 [core]
-	excludesfile = /Users/dkhayzin/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 [alias]
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate -20
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
